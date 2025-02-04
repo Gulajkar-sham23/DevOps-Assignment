@@ -56,7 +56,7 @@ jobs:
         # aws s3 sync ./ s3://your-s3-bucket-name/  # Optional: Sync to S3
 
         # SSH into EC2 (directly using EC2 public IP, AWS CLI, and a pre-installed EC2 instance role)
-        aws ec2 describe-instances --instance-ids your-instance-id --query "Reservations[].Instances[].PublicIpAddress" --output text > ec2-ip.txt
+        aws ec2 describe-instances --instance-ids i-06f90411ca382143e --query "Reservations[].Instances[].PublicIpAddress" --output text > ec2-ip.txt
         EC2_IP=$(cat ec2-ip.txt)
 
         # Install Node.js and deploy the app on EC2 (Make sure EC2 has proper IAM roles)
