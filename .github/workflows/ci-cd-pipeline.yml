@@ -55,7 +55,7 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H 18.207.115.241 >> ~/.ssh/known_hosts  # Add EC2 IP to known hosts
+        ssh-keyscan -H 54.227.110.34 >> ~/.ssh/known_hosts  # Add EC2 IP to known hosts
 
         # Sync the project files from GitHub to EC2 using AWS S3 and EC2 instance
         # aws s3 sync ./ s3://your-s3-bucket-name/  # Optional: Sync to S3
