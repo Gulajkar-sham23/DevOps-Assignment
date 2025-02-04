@@ -65,7 +65,7 @@ jobs:
         EC2_IP=$(cat ec2-ip.txt) 
 
         # Install Node.js and deploy the app on EC2 (Make sure EC2 has proper IAM roles)
-        ssh -o StrictHostKeyChecking=no -i /home/ubuntu/ec2_key.pem ec2-user@$EC2_IP && chmod 400 /home/ubuntu/ec2_key.pem
+        ssh -o StrictHostKeyChecking=no -i /root/home/ubuntu/ec2_key.pem ec2-user@$EC2_IP && chmod 400 /root/home/ubuntu/ec2_key.pem
         << 'EOF'
         
           cd /root/DevOps-Assignment/my-node-app
