@@ -29,6 +29,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    environment: node-app
     needs: build  # Ensure this step runs after the 'build' job
 
     steps:
