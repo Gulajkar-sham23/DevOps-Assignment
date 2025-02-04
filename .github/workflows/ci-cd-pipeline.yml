@@ -60,7 +60,7 @@ jobs:
 
         # Install Node.js and deploy the app on EC2 (Make sure EC2 has proper IAM roles)
         ssh -o StrictHostKeyChecking=no -i /path/to/your/private/key.pem ec2-user@$EC2_IP << 'EOF'
-          cd /path/to/app
+          cd /root/DevOps-Assignment/my-node-app
           git pull origin main
           npm install
           pm2 restart index.js  # Ensure your app is running with PM2
