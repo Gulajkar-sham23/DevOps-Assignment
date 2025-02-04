@@ -48,7 +48,8 @@ jobs:
     - name: Sync files with EC2
       run: |
         # Install the AWS CLI on the runner
-          sudo apt-get install -y awscli
+        # sudo apt-get install -y awscli
+        sudo pip3 install awscli -y
 
         # Sync the project files from GitHub to EC2 using AWS S3 and EC2 instance
         # aws s3 sync ./ s3://your-s3-bucket-name/  # Optional: Sync to S3
