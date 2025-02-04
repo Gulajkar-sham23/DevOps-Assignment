@@ -24,8 +24,8 @@ jobs:
     #- name: Run tests (optional)
     # run: npm test
 
-    - name: Build the application (optional)
-      run: npm run build  # Add if you have a build script
+    #- name: Build the application (optional)
+    # run: npm run build  # Add if you have a build script
 
   deploy:
     runs-on: ubuntu-latest
